@@ -14,4 +14,8 @@ export class ProjectService {
 	getProjects() {
 		return this.http.get<Project[]>('projects');
 	}
+
+	getProject(id: number) {
+		return this.http.get<Project>(`projects/${id}`);
+	}
 }

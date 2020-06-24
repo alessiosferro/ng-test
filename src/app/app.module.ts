@@ -6,6 +6,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {CoreModule} from "@app/core/core.module";
 import {HttpInterceptorService} from "@app/core/services/http-interceptor.service";
 import {ProjectModule} from "@app/features/project/project.module";
+import {AppRoutingModule} from "@app/app-routing.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ProjectModule} from "@app/features/project/project.module";
     BrowserModule,
     HttpClientModule,
     CoreModule,
-    ProjectModule
+    ProjectModule,
+    AppRoutingModule,
   ],
   providers: [
     {

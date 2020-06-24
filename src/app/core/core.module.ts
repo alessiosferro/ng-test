@@ -3,6 +3,6 @@ import {NavbarModule} from "@app/core/components/navbar/navbar.module";
 
 @NgModule({
 	imports: [NavbarModule],
-	exports: [NavbarModule]
+	exports: [NavbarModule],
 })
 export class CoreModule {}

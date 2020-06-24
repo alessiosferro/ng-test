@@ -3,6 +3,7 @@ import {Project} from '@app/shared/model/project.model';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ProjectService} from "@app/core/services/project.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'ngptt-project-list',
@@ -14,8 +15,9 @@ export class ProjectListComponent implements OnInit {
   selectedProject: Project;
 
   constructor(
-    private httpService: HttpClient,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private routerService: Router,
+    private activatedRouteService: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -24,5 +26,6 @@ export class ProjectListComponent implements OnInit {
 
   selectProject(project: Project) {
     this.selectedProject = project;
+    this.routerService.navigate(['../project', project.id], { relativeTo: this.activatedRouteService })
   }
 }

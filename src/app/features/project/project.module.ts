@@ -3,6 +3,8 @@ import {ProjectComponent} from "@app/features/project/project/project.component"
 import {ProjectDetailComponent} from "@app/features/project/project-detail/project-detail.component";
 import {ProjectListComponent} from "@app/features/project/project-list/project-list.component";
 import {CommonModule} from "@angular/common";
+import {ProjectRoutingModule} from "@app/features/project/project-routing.module";
+import {ProjectDetailResolver} from "@app/features/project/project-detail/project-detail.resolver";
 
 @NgModule({
 	declarations: [
@@ -16,7 +18,11 @@ import {CommonModule} from "@angular/common";
 		ProjectListComponent
 	],
 	imports: [
-		CommonModule
+		CommonModule,
+		ProjectRoutingModule,
+	],
+	providers: [
+		ProjectDetailResolver
 	]
 })
 export class ProjectModule {}
