@@ -5,12 +5,14 @@ import {ProjectListComponent} from "@app/features/project/project-list/project-l
 import {CommonModule} from "@angular/common";
 import {ProjectRoutingModule} from "@app/features/project/project-routing.module";
 import {ProjectDetailResolver} from "@app/features/project/project-detail/project-detail.resolver";
+import {ProjectPreviewComponent} from "@app/features/project/project-preview/project-preview.component";
 
 @NgModule({
 	declarations: [
 		ProjectComponent,
 		ProjectDetailComponent,
-		ProjectListComponent
+		ProjectListComponent,
+		ProjectPreviewComponent
 	],
 	exports: [
 		ProjectComponent,

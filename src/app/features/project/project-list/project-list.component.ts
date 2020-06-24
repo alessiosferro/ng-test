@@ -15,9 +15,9 @@ import {ActivatedRoute, Router} from "@angular/router";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectListComponent implements OnInit, OnDestroy {
-  previewProject$ = new BehaviorSubject<Project>(null);
   projects$: Observable<Project[]>;
   destroy$ = new Subject<void>();
+  previewProject: Project;
 
   constructor(
     private projectService: ProjectService,

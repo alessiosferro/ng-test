@@ -1,17 +1,14 @@
 <div class="card-columns">
     <ng-container *ngFor="let project of projects$ | async">
         <ngptt-project
-                (mouseleave)="previewProject$.next(null)"
-                (mouseover)="previewProject$.next(project)"
+                (mouseleave)="previewProject = null"
+                (mouseover)="previewProject = project"
                 (selectProject)="selectProject($event)"
                 [project]="project">
         </ngptt-project>
     </ng-container>
 </div>
 
-<ng-container *ngIf="previewProject$ | async as project">
-    <div class="jumbotron fade-in">
-        <h1 class="display-4">{{project.name}}</h1>
-        <p class="lead">{{project.description}}</p>
-    </div>
+<ng-container *ngIf="previewProject">
+    <ngptt-project-preview [project]="previewProject"></ngptt-project-preview>
 </ng-container>
