@@ -1,0 +1,10 @@
+<div class="card-columns">
+    <ng-container *ngFor="let project of projects$ | async">
+        <ngptt-project (selectProject)="selectProject($event)" [project]="project"></ngptt-project>
+    </ng-container>
+</div>
+
+<ngptt-project-detail
+        *ngIf="selectedProject"
+        [project]="selectedProject">
+</ngptt-project-detail>

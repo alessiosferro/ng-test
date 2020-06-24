@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "code": "NHusYJl",
+      "name": "Progetto Alpha",
+      "description": "Lorem ipsum dolor sit amet.",
+      "start": "2019-03-02T23:00:00.000Z",
+      "end": "2019-04-14T22:00:00.000Z",
+      "priority": "medium",
+      "done": true,
+      "tasks": []
+    },
+    {
+      "id": 2,
+      "code": "SJieYKl",
+      "name": "Progetto Beta",
+      "description": "Lorem ipsum dolor sit amet.",
+      "start": "2019-04-30T22:00:00.000Z",
+      "end": "2019-07-14T22:00:00.000Z",
+      "priority": "low",
+      "done": true,
+      "tasks": []
+    },
+    {
+      "id": 3,
+      "code": "POjeGBs",
+      "name": "Progetto Gamma",
+      "description": "Lorem ipsum dolor sit amet.",
+      "start": "2019-09-14T22:00:00.000Z",
+      "priority": "low",
+      "done": false,
+      "tasks": []
+    }
+  ]
+}

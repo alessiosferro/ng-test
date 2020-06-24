@@ -1,0 +1,7 @@
+<div class="card" [ngClass]="{'border-info': project.done, 'border-warning': !project.done }">
+    <div class="card-body">
+        <h5 class="card-title"><span class="badge badge-light float-right">{{ project.code }}</span>
+            {{ project.name }}</h5>
+        <a href="#" class="btn btn-primary btn-sm" (click)="selectProject.emit(project)">Vai al Progetto</a>
+    </div>
+</div>
